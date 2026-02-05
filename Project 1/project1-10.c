@@ -26,7 +26,7 @@ int daysInMonth(Month m, int year, CalendarType type) {
     }
 }
 
-int nextDate(Date *d, CalendarType t){
+void nextDate(Date *d, CalendarType t){
     d->day++;
     if(d->day > daysInMonth(d->month, d->year, t)){
         d->day = 1;
@@ -46,3 +46,4 @@ int main(){
     printf("Today: %02d.%02d.%d (Calendar: %s)\n", today.day, today.month, today.year, cal == GREGORIAN ? "Gregorian" : "Julian");
     return 0;
 }
+
